@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup_style.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="signup-container">
+      <h2>Sign Up</h2>
+      <form id="signup-form" action="signup_process.php" method="POST">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+          <span id="username-error" class="error">username minimal 5 karakter</span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <span id="email-error" class="error">Masukkan email yang valid</span>
+        </div>
+        <div class="form-group">
+          <label>gender</label>
+          <div class="radio-group">
+            <div>
+              <input type="radio" id="laki-laki" name="gender" value="laki-laki" />
+              <label for="male">laki-laki</label>
+            </div>
+            <div>
+              <input type="radio" id="wanita" name="gender" value="wanita" />
+              <label for="female">wanita</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <span id="password-error" class="error">password minimal 8 karakter dengan kombinasi angka</span>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm_password" required />
+          <span id="confirm-password-error" class="error">password tidak match</span>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="agreement" name="agreement" required />
+          <label for="agreement">Saya menyatakan bahwa data yang saya masukkan sudah benar</label>
+          <span id="agreement-error" class="error">Anda harus menyetujui untuk melanjutkan</span>
+        </div>
+        <div class="button-wrapper">
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
